@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="App">
       <div className="backDoor">
+        <div className="bowtie" />
         <div
           onClick={() => setOpen(!isOpen)}
           className={`door ${isOpen ? "doorOpen" : ""}`}
         ></div>
-
         <div
           onClick={() => setOpen(!isOpen)}
           className={`secondDoor ${isOpen ? "secondDoorOpen" : ""}`}
