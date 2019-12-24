@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [isOpen, setOpen] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="backDoor">
+        <div
+          onClick={() => setOpen(!isOpen)}
+          className={`door ${isOpen ? "doorOpen" : ""}`}
+        ></div>
+
+        <div
+          onClick={() => setOpen(!isOpen)}
+          className={`secondDoor ${isOpen ? "secondDoorOpen" : ""}`}
+        ></div>
+        <div className="giftDetails">
+          <p>
+            I år får du et gavekort på å reise til Oslo når du vil. No question
+            asked.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
